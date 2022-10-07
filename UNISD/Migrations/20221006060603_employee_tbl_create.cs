@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace UNISD.Migrations
 {
-    public partial class initialmigration : Migration
+    public partial class employee_tbl_create : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,8 +15,9 @@ namespace UNISD.Migrations
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Mobile = table.Column<int>(type: "int", nullable: false),
                     Nic = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Mobile = table.Column<int>(type: "int", nullable: false),
+                    position = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     TeamName = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>

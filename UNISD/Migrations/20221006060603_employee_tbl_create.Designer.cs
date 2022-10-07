@@ -11,9 +11,9 @@ using UNISD.DbCont;
 
 namespace UNISD.Migrations
 {
-    [DbContext(typeof(EmployeeContext))]
-    [Migration("20221002071640_initialmigration")]
-    partial class initialmigration
+    [DbContext(typeof(UContext))]
+    [Migration("20221006060603_employee_tbl_create")]
+    partial class employee_tbl_create
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -42,6 +42,10 @@ namespace UNISD.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TeamName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("position")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

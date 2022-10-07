@@ -6,9 +6,9 @@ namespace UNISD.Repo
 {
     public class EmployeeRepo:IEmployeeRepo
     {
-        private readonly EmployeeContext _employeeContext;
+        private readonly UContext _employeeContext;
 
-        public EmployeeRepo(EmployeeContext employeeContext)
+        public EmployeeRepo(UContext employeeContext)
         {
             _employeeContext = employeeContext;
         }

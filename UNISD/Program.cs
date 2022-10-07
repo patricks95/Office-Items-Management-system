@@ -15,7 +15,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
-builder.Services.AddDbContext<EmployeeContext>(Option => Option.UseSqlServer(
+builder.Services.AddDbContext<UContext>(Option => Option.UseSqlServer(
     builder.Configuration.GetConnectionString("uniString")));
 
 builder.Services.AddScoped<IEmployeeRepo, EmployeeRepo>();
