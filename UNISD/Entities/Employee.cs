@@ -24,6 +24,6 @@ namespace UNISD.Entities
         public string TeamName { get; set; }
 
 
-        public List<IssueItem> IssueItems { get; set; }
+        
     }
 }

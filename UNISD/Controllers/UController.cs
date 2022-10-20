@@ -7,11 +7,11 @@ namespace UNISD.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class EmployeeController : ControllerBase
+    public class UController : ControllerBase
     {
         private readonly IEmployeeService _employeeService;
 
-        public EmployeeController(IEmployeeService employeeService)
+        public UController(IEmployeeService employeeService)
         {
             _employeeService = employeeService;
         }
