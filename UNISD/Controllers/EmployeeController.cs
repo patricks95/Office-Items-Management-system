@@ -15,15 +15,16 @@ namespace UNISD.Controllers
         {
             _employeeService = employeeService;
         }
+        #region EMPLOYEE
 
         [HttpGet("GetAllEmployee")]
         public async Task<IActionResult> GetAllEmployee()
         {
-            var result =await _employeeService.GetAllEmployee().ConfigureAwait(true);
+            var result = await _employeeService.GetAllEmployee().ConfigureAwait(true);
             return Ok(result);
         }
 
-        [HttpGet("Get-By-Id")]   
+        [HttpGet("Get-By-Id")]
         public async Task<IActionResult> GetEmp(Guid id)
         {
 
@@ -37,24 +38,30 @@ namespace UNISD.Controllers
         }
 
         [HttpPut("New-emp")]
-        public async Task<IActionResult>NewEmp(Employee employee)
+        public async Task<IActionResult> NewEmp(Employee employee)
         {
-            var result=await _employeeService.NewEmp(employee);
+            var result = await _employeeService.NewEmp(employee);
             return Ok(result);
         }
 
         [HttpPost("update-emp")]
-        public async Task<IActionResult>UpdateEmp(Guid id, Employee updated)
+        public async Task<IActionResult> UpdateEmp(Guid id, Employee updated)
         {
-            var result=await _employeeService.UpdateEmp(id, updated);
+            var result = await _employeeService.UpdateEmp(id, updated);
             return Ok(result);
         }
 
         [HttpDelete("emp-delete")]
-        public async Task<IActionResult>DeleteEmp(Guid id)
+        public async Task<IActionResult> DeleteEmp(Guid id)
         {
-            var result= await _employeeService.DeleteEmp(id);
+            var result = await _employeeService.DeleteEmp(id);
             return Ok(result);
         }
+
+        #endregion
+
+
+
+
     }
 }
