@@ -10,18 +10,22 @@ namespace UNISD.Controllers
     public class EmployeeController : ControllerBase
     {
         private readonly IEmployeeService _employeeService;
+       
 
         public EmployeeController(IEmployeeService employeeService)
         {
             _employeeService = employeeService;
+           
         }
         #region EMPLOYEE
 
         [HttpGet("GetAllEmployee")]
         public async Task<IActionResult> GetAllEmployee()
         {
+
             var result = await _employeeService.GetAllEmployee().ConfigureAwait(true);
             return Ok(result);
+
         }
 
         [HttpGet("Get-By-Id")]
@@ -37,14 +41,14 @@ namespace UNISD.Controllers
             return Ok(result);
         }
 
-        [HttpPut("New-emp")]
+        [HttpPost("New-emp")]
         public async Task<IActionResult> NewEmp(Employee employee)
         {
             var result = await _employeeService.NewEmp(employee);
             return Ok(result);
         }
 
-        [HttpPost("update-emp")]
+        [HttpPut("update-emp")]
         public async Task<IActionResult> UpdateEmp(Guid id, Employee updated)
         {
             var result = await _employeeService.UpdateEmp(id, updated);
@@ -59,6 +63,10 @@ namespace UNISD.Controllers
         }
 
         #endregion
+
+
+
+       
 
 
 
