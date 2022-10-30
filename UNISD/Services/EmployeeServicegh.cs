@@ -4,11 +4,11 @@ using UNISD.IServices;
 
 namespace UNISD.Services
 {
-    public class EmployeeService:IEmployeeService
+    public class EmployeeServicegh:IEmployeeService
     {
         private readonly IEmployeeRepo _employeeRepo;
 
-        public EmployeeService(IEmployeeRepo employeeRepo)
+        public EmployeeServicegh(IEmployeeRepo employeeRepo)
         {
             _employeeRepo = employeeRepo;
         }
