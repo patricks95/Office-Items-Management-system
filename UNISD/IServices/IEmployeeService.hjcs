@@ -2,7 +2,7 @@
 
 namespace UNISD.IServices
 {
-    public interface IEmployeeService
+    public interface IEmployeeServicehj
     {
        Task<object> GetAllEmployee();
         Task<object> GetEmpById(Guid id);

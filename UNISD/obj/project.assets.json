@@ -2233,9 +2233,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\PROJECTS\\USD WEB\\Office-Items-Management-system\\UNISD\\UNISD.csproj",
-      "projectName": "UNISD",
-      "projectPath": "E:\\PROJECTS\\USD WEB\\Office-Items-Management-system\\UNISD\\UNISD.csproj",
+      "projectUniqueName": "E:\\PROJECTS\\USD WEB\\Office-Items-Management-system\\UNISD\\unido.csproj",
+      "projectName": "unido",
+      "projectPath": "E:\\PROJECTS\\USD WEB\\Office-Items-Management-system\\UNISD\\unido.csproj",
       "packagesPath": "C:\\Users\\patri\\.nuget\\packages\\",
       "outputPath": "E:\\PROJECTS\\USD WEB\\Office-Items-Management-system\\UNISD\\obj\\",
       "projectStyle": "PackageReference",

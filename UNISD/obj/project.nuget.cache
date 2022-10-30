@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zieLN8OJVYXCtRjObRzPRnBtkhgYqwdw9E8K2VvI/7raXSsQydghwY1pf7UpNmB9PtlKD7AjAVDUyKScDHp8Kw==",
+  "dgSpecHash": "edPrhrritr7tr570kmmE0+P6BmDc1NS1+fYV1SRY6EUgFyEHRFJ75e6igoRPwBXNFH+nbIf/SVZElP4XHlTJvw==",
   "success": true,
-  "projectFilePath": "E:\\PROJECTS\\USD WEB\\Office-Items-Management-system\\UNISD\\UNISD.csproj",
+  "projectFilePath": "E:\\PROJECTS\\USD WEB\\Office-Items-Management-system\\UNISD\\unido.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\patri\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\patri\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
