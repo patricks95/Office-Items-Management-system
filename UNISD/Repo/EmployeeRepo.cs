@@ -4,54 +4,56 @@ using UNISD.IRepo;
 
 namespace UNISD.Repo
 {
+
     public class EmployeeRepo:IEmployeeRepo
     {
-        private readonly UContext _employeeContext;
+        private readonly EmployeeContext _uContext;
 
-        public EmployeeRepo(UContext employeeContext)
+        public EmployeeRepo(EmployeeContext uContext)
         {
-            _employeeContext = employeeContext;
+            _uContext = uContext;
         }
 
 
         public async Task<object> GetAllEmp()
-        {
-            var result = _employeeContext.Employees.ToList();
+            {
+            var result = _uContext.Employees.ToList();
             return result;
         }
 
        public async Task<object>GetempById(Guid id)
         {
-            var res=_employeeContext.Employees.FirstOrDefault(x => x.Id == id);
+            var res= _uContext.Employees.FirstOrDefault(x => x.Id == id);
             return res;
         }
 
         public async Task<object>NewEmp(Employee employee)
         {
             employee.Id=Guid.NewGuid();
-            await _employeeContext.Employees.AddAsync(employee);
-            await _employeeContext.SaveChangesAsync();
+            await _uContext.Employees.AddAsync(employee);
+            await _uContext.SaveChangesAsync();
             return employee;
         }
 
         public async Task<object>UpdateEmp(Guid id ,Employee updated)
         {
-            var olddetails= _employeeContext.Employees.FirstOrDefault(x=>x.Id==id);
+            var olddetails= _uContext.Employees.FirstOrDefault(x=>x.Id==id);
                            
                 olddetails.Name=updated.Name;
                 olddetails.Mobile=updated.Mobile;
                 olddetails.Nic=updated.Nic;
                 olddetails.TeamName=updated.TeamName;
-                await _employeeContext.SaveChangesAsync();
+                await _uContext.SaveChangesAsync();
                 return updated;
                         
         }
 
+
         public async Task<object>DeleteEmp(Guid id)
         {
-            var getdetails= _employeeContext.Employees.FirstOrDefault(x=>x.Id==id);
-            _employeeContext.Employees.Remove(getdetails);
-            await _employeeContext.SaveChangesAsync();
+            var getdetails= _uContext.Employees.FirstOrDefault(x=>x.Id==id);
+            _uContext.Employees.Remove(getdetails);
+            await _uContext.SaveChangesAsync();
             return getdetails;
         }
     }

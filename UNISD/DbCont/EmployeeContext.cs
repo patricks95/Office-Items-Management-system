@@ -3,10 +3,10 @@ using UNISD.Entities;
 
 namespace UNISD.DbCont
 {
-    public class UContext : DbContext
+    public class EmployeeContext : DbContext
     {
 
-        public UContext(DbContextOptions options) : base(options)
+        public EmployeeContext(DbContextOptions options) : base(options)
         {
         }
 
